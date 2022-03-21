@@ -3,8 +3,8 @@ import "./App.css";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useEffect, useState } from "react";
 import Photo from "./components/Photo";
-import Loader from "./components/Loader";
-import EndMsg from "./components/EndMsg";
+// import Loader from "./components/Loader";
+// import EndMsg from "./components/EndMsg";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -51,7 +51,7 @@ function App() {
       dataLength={items.length} //This is important field to render the next data
       next={fetchData}
       hasMore={hasMore}
-      loader={<Loader />}
+      }
       endMessage={<EndMsg />}
     >
       <div className="container">
